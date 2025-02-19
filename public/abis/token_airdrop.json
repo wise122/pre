@@ -1,0 +1,335 @@
+[
+    {
+        "type": "constructor",
+        "stateMutability": "nonpayable",
+        "inputs": []
+    },
+    {
+        "type": "event",
+        "name": "TokenClaimed",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "user",
+                "internalType": "address",
+                "indexed": false
+            },
+            {
+                "type": "string",
+                "name": "tokenType",
+                "internalType": "string",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "bunnyTokenAddress",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "claimBunnyTokens",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "claimEthTokens",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ],
+        "name": "claimableTime",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ],
+        "name": "getClaimableTime",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "tuple",
+                "name": "",
+                "internalType": "struct BinkyPresale.UserInfo",
+                "components": [
+                    {
+                        "type": "address",
+                        "name": "walletAddress",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "ethPaidAmount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "bunnyPaidAmount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "ethCanClaimAmount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "bunnyCanClaimAmount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "ethClaimedState",
+                        "internalType": "bool"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "bunnyClaimedState",
+                        "internalType": "bool"
+                    }
+                ]
+            }
+        ],
+        "name": "getStakedInfoByUser",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "staker",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "getTokenAddr",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "bool",
+                "name": "",
+                "internalType": "bool"
+            }
+        ],
+        "name": "isAvailableToBuy",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "bool",
+                "name": "",
+                "internalType": "bool"
+            }
+        ],
+        "name": "isTokenClaimable",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ],
+        "name": "maxCapAmount",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "owner",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "payBunnyToClaimTokens",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_bunnyAmount",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "payable",
+        "outputs": [],
+        "name": "payEthToClaimTokens",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "setBunnyTokenAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_bunnyTokenAddress",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "setClaimableTime",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_claimableTime",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "setTokenAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_tokenAddress",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "tokenAddress",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "walletAddress",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "ethPaidAmount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "bunnyPaidAmount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "ethCanClaimAmount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "bunnyCanClaimAmount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "bool",
+                "name": "ethClaimedState",
+                "internalType": "bool"
+            },
+            {
+                "type": "bool",
+                "name": "bunnyClaimedState",
+                "internalType": "bool"
+            }
+        ],
+        "name": "users",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "withdrawAllEth",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "withdrawAllTokens",
+        "inputs": []
+    }
+]
