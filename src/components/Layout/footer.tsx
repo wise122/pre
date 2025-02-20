@@ -1,17 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import { AttentionSeeker, Zoom } from "react-awesome-reveal";
+import { TbBrandDiscord, TbBrandTelegram, TbBrandTwitter } from "react-icons/tb";
 import {
-  TbBrandDiscord,
-  TbBrandTelegram,
-  TbBrandTwitter,
-} from "react-icons/tb";
-import {
-  PRESALE_ENDED_TIME,
-  SITE_LINK,
   TELEGRAM_LINK,
-  TOTAL_ETH_AMOUNT,
   TWITTER_LINK,
 } from "../../config";
 import { usePathname } from "next/navigation";
@@ -21,10 +13,11 @@ const Footer = () => {
 
   return (
     <div
-      className={`w-full flex items-center justify-between relative flex-col bg-[#C7EBFD] py-10
+      className={`w-full flex flex-col items-center justify-between relative bg-gradient-to-b from-black to-gray-900 py-10 text-white
     ${router === "/presale" && "hidden"}`}
     >
-      <div className="flex items-center justify-center border-2 border-black relative w-[150px] h-[150px] rounded-full">
+      {/* Logo */}
+      <div className="flex items-center justify-center border-2 border-white relative w-[150px] h-[150px] rounded-full">
         <Image
           alt="Avatar"
           fill
@@ -32,25 +25,33 @@ const Footer = () => {
           className="rounded-full"
         />
       </div>
+
+      {/* Disclaimer */}
       <p className="text-md font-bold text-center md:w-[700px] w-full mt-4">
-        {`Disclamier: BInky Bunny is a meme coin made for entertainment purposes. We make no promises about future value, so be responsible. Crypto may be unregulated in your 
-          jurisdiction.`}
+        {`Disclaimer: BInky Bunny is a meme coin made for entertainment purposes. We make no promises about future value, so be responsible. Crypto may be unregulated in your jurisdiction.`}
       </p>
+
+      {/* Social Icons */}
       <div className="flex items-center justify-center gap-3 my-5 z-10">
-        <a href={TWITTER_LINK} target="_blank" rel="referrer">
-          <div className="p-2 rounded-full shadow-black shadow-sm bg-[#033FD5] border-black hover:shadow-black hover:shadow-md duration-300 cursor-pointer">
-            <TbBrandTwitter color="white" />
+        <a href={TWITTER_LINK} target="_blank" rel="noreferrer">
+          <div className="p-3 rounded-full shadow-lg bg-blue-500 border border-white hover:shadow-white duration-300 cursor-pointer">
+            <TbBrandTwitter color="white" size={24} />
           </div>
         </a>
-        <a href={TELEGRAM_LINK} target="_blank" rel="referrer">
-          <div className="p-2 rounded-full shadow-black shadow-sm bg-[#033FD5] border-black hover:shadow-black hover:shadow-md duration-300 cursor-pointer">
-            <TbBrandDiscord color="white" />
+        <a href={TELEGRAM_LINK} target="_blank" rel="noreferrer">
+          <div className="p-3 rounded-full shadow-lg bg-blue-500 border border-white hover:shadow-white duration-300 cursor-pointer">
+            <TbBrandTelegram color="white" size={24} />
+          </div>
+        </a>
+        <a href={TELEGRAM_LINK} target="_blank" rel="noreferrer">
+          <div className="p-3 rounded-full shadow-lg bg-blue-500 border border-white hover:shadow-white duration-300 cursor-pointer">
+            <TbBrandDiscord color="white" size={24} />
           </div>
         </a>
       </div>
-      <div className="w-full absolute -mb-2 bottom-0">
-        <img src={"/imgs/footerBanner.png"} alt="shape" className="w-full" />
-      </div>
+
+      {/* Footer Image */}
+      
     </div>
   );
 };
